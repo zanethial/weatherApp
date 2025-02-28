@@ -11,5 +11,5 @@ function ForecastDayTile({thisDay}) {
     </div>
   )
 }
-https://th.bing.com/th/id/R.9a866ddaad270249dacbf8c73a7fdf9e?rik=wcPfTI1891vr2w&pid=ImgRaw&r=0
+// https://th.bing.com/th/id/R.9a866ddaad270249dacbf8c73a7fdf9e?rik=wcPfTI1891vr2w&pid=ImgRaw&r=0
 export default ForecastDayTile

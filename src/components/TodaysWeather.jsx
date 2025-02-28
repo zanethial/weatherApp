@@ -1,12 +1,17 @@
 import React from 'react'
 
-function TodaysWeather() {
+function TodaysWeather({weather}) {
+
+    if (!weather) return null;
+
+    const {condition,icon,name,temp,time} = weather;
+
   return (
     <div>
-        <h2>Today is Tuesday</h2>
-        <h1>Florida</h1>
-        <h1>87*</h1>
-        <h1 className='bigWeatherEmoji'>☀️</h1>
+        <h2>{name}</h2>
+        <h1>{condition}</h1>
+        <img src={icon} alt="" />
+        <h1>{temp} F</h1>
     </div>
   )
 }

@@ -2,10 +2,10 @@ import React from 'react'
 import Time from '../Time'
 import TodaysWeather from '../TodaysWeather'
 
-function HomePage() {
+function HomePage({weather}) {
   return (
     <div>
-      <TodaysWeather/>
+      <TodaysWeather weather={weather}/>
       <Time />
     </div>
   )

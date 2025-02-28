@@ -22,8 +22,8 @@ function SunInfoPage() {
     </div>
 )
 }
-https://i.pinimg.com/originals/71/21/85/712185683557a51c87a1d821a251d183.jpg
-https://th.bing.com/th/id/OIP.54uBzOX6lNghCKI2sA-lnAHaEo?rs=1&pid=ImgDetMain
-https://th.bing.com/th/id/OIP.DLggRBvTm1e7t0Xly9CicwHaE8?w=235&h=180&c=7&r=0&o=5&pid=1.7
+// https://i.pinimg.com/originals/71/21/85/712185683557a51c87a1d821a251d183.jpg
+// https://th.bing.com/th/id/OIP.54uBzOX6lNghCKI2sA-lnAHaEo?rs=1&pid=ImgDetMain
+// https://th.bing.com/th/id/OIP.DLggRBvTm1e7t0Xly9CicwHaE8?w=235&h=180&c=7&r=0&o=5&pid=1.7
 
 export default SunInfoPage
