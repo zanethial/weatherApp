@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
+import SunInfoTile from './SunInfoTile';
 
-function SunInfoTile({day}) {
-
-    const {dayOfWeek,sunsetTime,sunriseTime} = day;
+function SunInfoContainer() {
+  const sunData = {
+    dayOfWeek: "Monday",
+    sunriseTime: "6:30 AM",
+    sunsetTime: "6:45 PM"
+  };
 
   return (
-    <div>SunInfoTile</div>
-  )
+    <div className="flex justify-center p-4">
+      <SunInfoTile day={sunData} />
+    </div>
+  );
 }
 
-export default SunInfoTile
+export default SunInfoContainer
