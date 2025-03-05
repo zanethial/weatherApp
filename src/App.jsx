@@ -14,7 +14,7 @@ function App() {
     let [weather,setWeather] = useState(null)
 
     useEffect(() => {
-        let zipcode = 'Chiang Mai'
+        let zipcode = 'Tokyo'
         let url = `http://api.weatherapi.com/v1/current.json?key=${apiKEY}&q=${zipcode}&aqi=yes`
 
         const getData = async () => {
@@ -39,7 +39,7 @@ function App() {
       <h2>Weather App</h2>
       <Navbar />
       <Routes>
-        <Route path='/' element={<HomePage weather={weather} />} />
+        <Route path='/' element={<HomePage weather={weather} setWeather={setWeather} />} />
         <Route path='/forecast' element={<WeeklyForecastPage />} />
         <Route path='/sun' element={<SunInfoPage />} />
       </Routes>
