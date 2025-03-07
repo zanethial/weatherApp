@@ -31,3 +31,11 @@ body {
 .bigWeatherEmoji {
   font-size: 100px;
 }
+
+.homePage {
+    border: solid white 2px;
+    margin: 30px;
+    border-radius: 10px;
+    width: 50vw;
+    padding-bottom: 20px;
+}

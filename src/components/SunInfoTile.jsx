@@ -1,5 +1,4 @@
 import React from 'react';
-import SunInfoTile from './SunInfoTile';
 
 function SunInfoContainer() {
   const sunData = {
@@ -10,7 +9,7 @@ function SunInfoContainer() {
 
   return (
     <div className="flex justify-center p-4">
-      <SunInfoTile day={sunData} />
+      fake data
     </div>
   );
 }

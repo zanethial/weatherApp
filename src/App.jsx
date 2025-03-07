@@ -11,35 +11,33 @@ function App() {
 
     let apiKEY = 'c38d3fa7fcef4da596220631252602';
 
+    let [location,setLocation] = useState('London');
     let [weather,setWeather] = useState(null)
 
-    useEffect(() => {
-        let zipcode = 'Tokyo'
-        let url = `http://api.weatherapi.com/v1/current.json?key=${apiKEY}&q=${zipcode}&aqi=yes`
-
-        const getData = async () => {
-            let res = await axios.get(url)
-            console.log(res.data)
-            let newWeather = {
-                name: res.data.location.name,
-                time: res.data.location.localtime,
-                temp: res.data.current.temp_f,
-                condition: res.data.current.condition.text,
-                icon: res.data.current.condition.icon
-            }
-            setWeather(newWeather)
+    const getWeatherFromAPI = async (location) => {
+        let url = `http://api.weatherapi.com/v1/current.json?key=${apiKEY}&q=${location}&aqi=yes`
+        let res = await axios.get(url)
+        console.log(res.data)
+        let newWeather = {
+            name: res.data.location.name,
+            time: res.data.location.localtime,
+            temp: res.data.current.temp_f,
+            condition: res.data.current.condition.text,
+            icon: res.data.current.condition.icon
         }
+        setWeather(newWeather)
+    }
 
-        getData();
-
-    },[])
+    useEffect(() => {
+        getWeatherFromAPI(location);
+    },[location])
 
   return (
     <div>
       <h2>Weather App</h2>
       <Navbar />
       <Routes>
-        <Route path='/' element={<HomePage weather={weather} setWeather={setWeather} />} />
+        <Route path='/' element={<HomePage weather={weather} setLocation={setLocation} />} />
         <Route path='/forecast' element={<WeeklyForecastPage />} />
         <Route path='/sun' element={<SunInfoPage />} />
       </Routes>
